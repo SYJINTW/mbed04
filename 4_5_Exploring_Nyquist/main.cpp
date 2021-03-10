@@ -1,4 +1,6 @@
 #include "mbed.h"
+#include <chrono>
+#include <thread>
 
 AnalogOut Aout(D7);
 AnalogIn Ain(A0);
@@ -8,6 +10,6 @@ int main(){
   while(1){
     ADCdata = Ain;
     Aout = ADCdata;
-    ThisThread::sleep_for(20ms);
+    ThisThread::sleep_for(2ms);
   }
 }
